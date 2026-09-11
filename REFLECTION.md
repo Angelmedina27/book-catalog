@@ -1,0 +1,6 @@
+"FAIL: test_book_appears_on_books_page (catalog.tests.BookCatalogTests.test_book_appears_on_books_page)"
+This failure told me that the tests works correctly and will catch any bug if the code stops showing books on the page.
+
+<b>Question 1. Your models use two foreign keys. Pick one of them. Name which model carries the ForeignKey and which model it points at, and explain why you arranged it that way. What would be different about the data you entered if you had reversed it?<b> The "Book" model carries the ForeignKey and points at the "Publisher" model. I arranged it this way because a publisher can have several books, but a book can only have a single publisher. Had I reversed it, that would mean a publisher could only have one book which would end up breaking the database layout.
+
+<b>Question 2. You added one field of your own to Book. Which field type did you choose, and why that type rather than another? What would you lose if you had stored the same fact as a CharField?<b> I chose the DecimalField for my field type because many things including books need exacts totals so without that field, you wouldn't be able to use cents for the total costs.
